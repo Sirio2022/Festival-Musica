@@ -401,3 +401,52 @@ h3 {
 .navegacion-principal a:hover {
   color: #fef46d;
 }
+
+.video {
+  position: relative;
+  max-height: 70rem;
+  min-height: 50rem;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(156, 0, 255);
+  background: -moz-linear-gradient(318deg, rgba(156, 0, 255, 0.2483193106) 19%, rgba(255, 0, 0, 0.1166666496) 100%);
+  background: -webkit-linear-gradient(318deg, rgba(156, 0, 255, 0.2483193106) 19%, rgba(255, 0, 0, 0.1166666496) 100%);
+  background: linear-gradient(318deg, rgba(156, 0, 255, 0.2483193106) 19%, rgba(255, 0, 0, 0.1166666496) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9c00ff",endColorstr="#ff0000",GradientType=1);
+}
+
+video {
+  width: auto;
+}
+@media (min-width: 992px) {
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+}
+
+.contenido-video h2 {
+  color: #ffffff;
+  font-size: 7rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.contenido-video p {
+  background-color: #f53756;
+  color: #ffffff;
+  font-size: 2.4rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  display: inline-block;
+  margin: 0;
+}
