@@ -61,6 +61,7 @@ function dev(done) {
   done();
 }
 
+exports.css = css;
 exports.versionAvif = versionAvif;
 exports.minifyImage = minifyImage;
 exports.versionWebp = versionWebp;
