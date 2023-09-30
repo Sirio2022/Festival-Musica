@@ -13,8 +13,8 @@ function css(done) {
   // Identify the source file SASS
   src('src/scss/**/*.scss')
     // Process the file
-    .pipe(sass())
     .pipe(plumber())
+    .pipe(sass())
 
     // Write the destination file
 
