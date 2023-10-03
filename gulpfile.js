@@ -56,13 +56,22 @@ function minifyImage(done) {
   done();
 }
 
+function javascript(done) {
+  src('src/js/**/*.js').pipe(dest('build/js'));
+
+  done();
+}
+
 function dev(done) {
   watch('src/scss/**/*.scss', css);
+  watch('src/scss/**/*.js', javascript);
+
   done();
 }
 
 exports.css = css;
+exports.javascript = javascript;
 exports.versionAvif = versionAvif;
 exports.minifyImage = minifyImage;
 exports.versionWebp = versionWebp;
-exports.dev = parallel(dev, versionWebp, minifyImage, versionAvif);
+exports.dev = parallel(dev, versionWebp, minifyImage, versionAvif, javascript, css);
