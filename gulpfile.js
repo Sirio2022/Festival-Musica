@@ -5,6 +5,7 @@ const plumber = require('gulp-plumber');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const postcss = require('gulp-postcss');
+const sourcemaps = require('gulp-sourcemaps');
 
 // Imagenes
 const webp = require('gulp-webp');
@@ -16,12 +17,14 @@ function css(done) {
   // Identify the source file SASS
   src('src/scss/**/*.scss')
     // Process the file
+    .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([autoprefixer(), cssnano()]))
 
     // Write the destination file
 
+    .pipe(sourcemaps.write('.'))
     .pipe(dest('build/css'));
 
   done(); // Signal completion
