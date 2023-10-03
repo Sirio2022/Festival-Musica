@@ -3,7 +3,24 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function iniciarApp() {
+  scrollNav();
   crearGaleria();
+}
+
+function scrollNav() {
+  const enlaces = document.querySelectorAll('.navegacion-principal a');
+
+  enlaces.forEach((enclace) => {
+    enclace.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const seccion = document.querySelector(e.target.attributes.href.value);
+
+      seccion.scrollIntoView({
+        behavior: 'smooth',
+      });
+    });
+  });
 }
 
 function crearGaleria() {
