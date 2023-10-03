@@ -638,3 +638,72 @@ h2 {
 .btn-cerrar:hover {
   cursor: pointer;
 }
+
+.boletos {
+  padding: 5rem 0;
+}
+.boletos h3 {
+  text-align: center;
+  color: #ffffff;
+}
+.boletos .contenedor-boletos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+
+.pase {
+  color: black;
+}
+.pase .nombre-pase {
+  color: #ffffff;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.pase-header p, .pase-footer p {
+  padding: 0.5rem;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+}
+.pase-header {
+  background-color: #f53756;
+}
+.pase-header p {
+  text-transform: uppercase;
+}
+.pase-body {
+  background-color: #ffffff;
+}
+.pase-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pase-body ul li,
+.pase-body ul :nth-child(odd) {
+  background-color: #ffffff;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-bottom: 1px solid #e1e1e1;
+}
+.pase-footer {
+  background-color: #752f97;
+}
+.pase-footer p {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.site-footer {
+  background-color: #f53756;
+  padding: 1rem;
+}
+.site-footer p {
+  margin: 0;
+  color: #ffffff;
+  text-align: center;
+}
