@@ -13,6 +13,9 @@ const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const avif = require('gulp-avif');
 
+// JavaScript
+const terser = require('gulp-terser-js')
+
 function css(done) {
   // Identify the source file SASS
   src('src/scss/**/*.scss')
@@ -64,7 +67,9 @@ function minifyImage(done) {
 }
 
 function javascript(done) {
-  src('src/js/**/*.js').pipe(dest('build/js'));
+  src('src/js/**/*.js')
+  .pipe(terser())
+  .pipe(dest('build/js'));
 
   done();
 }
